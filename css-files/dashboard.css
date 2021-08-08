@@ -1,0 +1,45 @@
+.dash-header{
+	background-color: #3A424F;
+}
+.dash-header div img{
+	width:15%;
+}
+
+.dash-list{
+	display: inline-flex;
+}
+
+.dash-list a{
+	margin: 0 5px;
+	padding: 0 10px;
+	/*color: #F58634;*/
+	color:white;
+}
+
+.dash-list a:hover{
+	color: #F58634;
+	text-decoration: none;
+}
+
+.dashboard-img{
+	height: 250px;
+	background-image: url('../images/product_img/portfolio-2.jpg'); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+/*.background-cover{
+	background-color: white;
+	height: 100px;
+	border:1px solid blue;
+}*/
+
+/*=============================== NEDIA QUERIES START HERE ============================*/
+
+@media (min-width:992px){
+	.dash-header div img{
+		width:6%;
+	}
+}
