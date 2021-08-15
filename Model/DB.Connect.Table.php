@@ -12,13 +12,51 @@ class Database{
         $this->severname = "localhost";
         $this->username = "root";//mydrgvpm_admin
         $this->password = "";//esc1024Bytes
-        $this->db = "mydrgvpm_db";//
-
-    
+        $this->db = "neduexpr";//
 
         $connect = new mysqli($this->severname, $this->username, $this->password, $this->db);
         
         return $connect;
+
+    }
+
+    public function Login($email, $password){  
+        $this->email = $email;
+        $this->password = $password;
+
+        $email = mysqli_escape_string($this->connect(), $email);
+        $password = mysqli_escape_string($this->connect(), $password);
+
+        $email_address = strtolower($email);
+        $pass = md5($password);
+
+        $sql = "SELECT * FROM admin WHERE email='$email_address' AND password='$pass' ";
+        $query = $this->connect()->query($sql);
+        $numRows = $query->num_rows;
+        if($numRows > 0){
+            while($row = mysqli_fetch_assoc($query)){
+                $_SESSION["email"] = $row["email"];
+                //$_SESSION["userid"] = $row["userid"];
+                // $_SESSION["name"] = $row["name"];
+
+                ?><script>window.location='../SuperAdmin/index.php'; </script><?php
+            }
+        }else{
+            $sql = "SELECT * FROM register WHERE email='$email_address' AND password='$pass' ";
+            $query = $this->connect()->query($sql);
+            $numRow = $query->num_rows;
+            if($numRow > 0){
+                while($row = mysqli_fetch_assoc($query)){
+                    $_SESSION["email"] = $row["email"];
+                    $_SESSION["userid"] = $row["userid"];
+                    // $_SESSION["name"] = $row["name"];
+    
+                    ?><script>window.location='../vendor-dash/vendor-dashboard.php'; </script><?php
+                }
+            }
+            echo "<script>alert('Incorrect email and password'); history.back(); </script>";
+
+        }
 
     }
 

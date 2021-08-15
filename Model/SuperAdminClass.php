@@ -3,19 +3,21 @@ require "DB.Connect.Table.php";
 
 class SuperAdmin extends Database {
 
-    public function RegisterVendor($cover, $name, $email, $phone, $location){
+    public function RegisterVendor($cover, $name, $store, $email, $phone, $location){
         // $this->category = $category;
         $this->name = $name;
-        // $this->store = $store;
+        $this->store = $store;
         $this->email = $email;
         $this->phone = $phone;
         $this->location = $location;
         $this->cover = $cover;
+        $pass = "neduexpr123456";
+        $password = md5($pass);
 
         $this->CreateDataTables();
         // $category = mysqli_escape_string($this->connect(), $category);
         $name = mysqli_escape_string($this->connect(), $name);
-        // $store = mysqli_escape_string($this->connect(), $store);
+        $store = mysqli_escape_string($this->connect(), $store);
         $email = mysqli_escape_string($this->connect(), $email);
         $phone = mysqli_escape_string($this->connect(), $phone);
         $location = mysqli_escape_string($this->connect(), $location);
@@ -29,31 +31,52 @@ class SuperAdmin extends Database {
         $query = $this->connect()->query($sql);
         $numRows = $query->num_rows;
         if($numRows > 0){
-            echo "<script>alert('The Email Address Already Exists');  window.location .href= '../SuperAdmin/register-vendor.php';</script>";
+            echo "<script>alert('The Email Address Already Exists');  history.back(); </script>";
             die();
         }
 
         $this->UploadFiles($cover);
 
+
         //Create  Registration Details
-        $insert_reg = "INSERT INTO register SET userid ='$userid', email ='$email_address', name ='$name', status ='0', date=NOW()";
+        $insert_reg = "INSERT INTO register SET userid ='$userid', email ='$email_address', name ='$name', password ='$password', status ='0', date=NOW()";
         $query_reg = $this->connect()->query($insert_reg);
         if($query_reg){
-            $insert = "INSERT INTO vendors_profile SET userid='$userid', name='$name', email='$email_address', phone='$phone', address='$location', img='$cover', status='0', date=NOW() ";
+            $insert = "INSERT INTO vendors_profile SET userid='$userid', name='$name', email='$email_address', phone='$phone', store='$store', address='$location', img='$cover', status='0', date=NOW() ";
             $insert_query = $this->connect()->query($insert);    
             if($insert_query){
                 // $this->SendVendorDetails();
-                echo "<script type='text/javascript'> alert('Vendor Registration Completed'); window.location .href= '../SuperAdmin/register-vendor.php'; </script>";
+                echo "<script type='text/javascript'> alert('Vendor Registration Completed'); history.back(); </script>";
             }else{
-                echo "<script type='text/javascript'> alert('Registration Failed, Try Again later'); window.location .href= '../SuperAdmin/register-vendor.php'; </script>";
+                echo "<script type='text/javascript'> alert('Registration Failed, Try Again later'); history.back(); </script>";
             }
         }else{
-            echo "<script type='text/javascript'> alert('Registration Failed, Try Again later'); window.location .href= '../SuperAdmin/register-vendor.php'; </script>";
+            echo "<script type='text/javascript'> alert('Registration Failed, Try Again later'); history.back(); </script>";
             die();
         }
 
 
 
+    }
+
+    public function GetVendorDetails(){
+        $userid = $_GET["userid"];
+        $email = $_GET["email"];
+
+        $sql = "SELECT * FROM vendors_profile WHERE userid='$userid' AND email='$email' ";
+        $query = $this->connect()->query($sql);
+        $numRows = $query->num_rows;
+        if($numRows > 0){
+            while($row = $query->fetch_assoc()){
+                $user[] = $row;
+
+            }
+        }else{
+            echo "<script> history.back();</script>";
+            die();
+        }
+
+        return $user;
     }
 
     public function EditVendorDetails(){

@@ -1,4 +1,7 @@
-<?php require "header.php"; ?>
+<?php require "header.php"; 
+foreach($object->GetVendorDetails() as $vendor) {};
+?>
+
 <link href="css/vendor-profile.css" rel="stylesheet" type="text/css">
 
 
@@ -13,9 +16,9 @@
                     <div class="well profile">
                         <div class="row">
                             <div class="col-xs-12 col-sm-8">
-                                <h2>Oaksoft Digit</h2>
-                                <p><strong>Vendor Name: </strong> Web Designer / UI. </p>
-                                <p><strong>Description: </strong> Read, out with friends, listen to music, draw and learn new things. </p>
+                                <h2> <?php echo $vendor["store"] ?></h2>
+                                <p><strong>Vendor Name: </strong> <?php echo $vendor["name"] ?> </p>
+                                <p><strong>Description: </strong> <?php echo $vendor["description"] ?> </p>
                             
                             </div>             
                             <div class="col-xs-12 col-sm-4 text-center">
@@ -47,12 +50,12 @@
                             <div class="col-xs-12 col-sm-4 emphasis">
                                 <h2><strong> 20,7K </strong></h2>                    
                                 <p><small>Products</small></p>
-                                <button class="btn btn-success btn-block">View Products </button>
+                                <button class="btn btn-success btn-block">Products </button>
                             </div>
                             <div class="col-xs-12 col-sm-4 emphasis">
                                 <h2><strong>245</strong></h2>                    
                                 <p><small>Sold</small></p>
-                                <button class="btn btn-info btn-block">View Sold Product </button>
+                                <button class="btn btn-info btn-block">Sold Product </button>
                             </div>
                             <div class="col-xs-12 col-sm-4 emphasis">
                                 <h2><strong>43</strong></h2>                    

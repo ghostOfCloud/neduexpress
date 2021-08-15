@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Dashboard: vendor</title>
+    <title>vendor dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link href="../design-files/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../bootstrap/dist/css/bootstrap.css">
@@ -37,9 +38,11 @@
 				        </button>
             </div>
             <div class="p-4 pt-5">
+                <!-- <h1><a href="index.html" class="logo">Splash</a></h1> -->
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
                         <a href="vendor-dashboard.html">Dashboard</a>
+
                     </li>
                     <li>
                         <a href="add-items.html">Add items</a>
@@ -59,7 +62,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="user-profile">Profile</a>
+                        <a href="user-profile.html ">Profile</a>
                     </li>
                     <!-- <li>
 	              <a href="#">Contact</a>
@@ -80,39 +83,58 @@
         </nav>
 
         <!-- Page Content  -->
-        <div id="content" class=" p-5 pt-2">
+        <div id="content" class="p-4 p-md-5 pt-5">
 
             <div class="mycontainhide" id="storeItems">
-                <div>
-                    <h4 style="display: inline-flex; border-bottom: 2px solid #F58634"><em>Item ...</em></h4>
+                <div class="d-flex justify-content-between">
+                    <h4 style="display: inline-flex; border-bottom: 2px solid #F58634"><em>Store Items</em></h4>
+                    <div class="" onclick="redirectPage()"><i class="fa fa-plus p-2 d-flex justify-content-center" style=""></i></div>
                 </div>
 
-                <div class="container recomm-img mt-4" style=" ;">
+                <div class="container recomm-img mt-4">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 p-2 img-orange-cont" style="position: relative;">
-                            <div class="orange-cont animated slideInRight">
-
+                        <div class="col-md-4 col-sm-6 col-6">
+                            <div class="product-order-body-img">
+                                <a href="items-details.html">
+                                    <img src="../images/product_img/portfolio-1.jpg" class="img-fluid">
+                                </a>
                             </div>
 
-                            <div class="image-item animated zoomIn">
-                                <img src="../images/product_img/portfolio-5.jpg" class="img-fluid" style="width: 100%; height: 100%">
+                            <div class="product-order-body-img mt-3">
+                                <a href="items-details.html">
+                                    <img src="../images/product_img/portfolio-8.jpg" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-6">
+                            <div class="product-order-body-img">
+                                <a href="items-details.html">
+                                    <img src="../images/product_img/portfolio-3.jpg" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="product-order-body-img mt-3">
+                                <a href="items-details.html">
+                                    <img src="../images/product_img/portfolio-5.jpg" class="img-fluid">
+                                </a>
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6">
-                            <div class="prod-det-cont">
-                                <h5><i> Reading studying Lamp</i></h5>
-                                <p class="store-itemdet"> Product ID: <span> 45312 </span> </p>
-                                <p class="store-itemdet"> Category: <span> tools and equipments </span> </p>
-                                <p class="store-itemdet"> Quantity left: <span> 4 </span> </p>
-                                <p class="store-itemdet"> Date uploaded : <span> 4th july </span> </p>
-                                <p class="store-itemdet"> Comments: <span> 400 </span> </p>
+                        <div class="col-md-4 col-6">
+                            <div class="product-order-body-img">
+                                <a href="items-details.html">
+                                    <img src="../images/product_img/portfolio-9.jpg" class="img-fluid">
+                                </a>
                             </div>
 
-                            <div class="text-right pt-md-4">
-                                <a href="items-details.html" class="upload-btn edit-btn d-inline-flex px-md-5 "> Edit </a>
+                            <div class="product-order-body-img mt-3">
+                                <a href="items-details.html">
+                                    <img src="../images/product_img/portfolio-2.jpg" class="img-fluid">
+                                </a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -126,6 +148,7 @@
 
 
 </body>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>

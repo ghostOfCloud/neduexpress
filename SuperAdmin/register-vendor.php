@@ -5,60 +5,59 @@
 
     <!-- Content Row -->
     <div class="row">
-        <div class="container card">
-            <div class="card-body">
-                <form action="../Controller/SuperAdminController.php" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="exampleInputCategory1">Vendor Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter Vendor Name" name="name">
-
-                        <!-- <select class="form-control" id="exampleFormControlSelect1" name="category">
-                            <option value="electronics">1</option>
-                            <option value="grocery">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                        </select> -->
-                    </div>
+        <div class="container mt-4">
+            <form method="POST" action="../Controller/SuperAdminController.php" enctype="multipart/form-data" id="uploadForm">
+                <div class="container">
                     <div class="row">
-                        <div class="form-group col-12">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div class="form-group col-12">
-                            <label for="exampleInputPhoneNumber1">Phone Number</label>
-                            <input type="text" class="form-control" id="exampleInputPhoneNumber1" placeholder="+234 90..." name="phone">
-                        </div>
-                    </div>
+                        <div class="col-lg-8 col-sm-7" style="border-right: 1px solid grey">
+                            
+                            <label for="store">Store Name</label>
+                            <div class="input-group mb-4">
+                                <input id="store" type="text" class="form-control" name="store" placeholder="Enter Store Name">
+                            </div>
 
-                    <div class="row">
-                        <div class="form-group col-12">
-                            <label for="exampleInputLocation1">Location</label>
-                            <input type="text" class="form-control" id="exampleInputLocation1" aria-describedby="Location" placeholder="Enter Vendor Location" name="address">
-                        </div>
-                        <div class="form-group col-12">
-                            <label for="exampleInputPhoneNumber1">Upload Vendor Cover Photo</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Upload Cover </span>
-                                </div>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="filename" onchange="return fileValidation()" name="file">
-                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                </div>
+                            <label for="name">Vendor Name</label>
+                            <div class="input-group mb-4">
+                                <input id="name" type="text" class="form-control" name="name" placeholder="Enter Vendor Name">
+                            </div>
+                            <hr>
+
+                            <label for="email">Vendor Email</label>
+                            <div class="input-group mb-4">
+                                <input id="email" type="email" class="form-control" name="email" placeholder="Enter Vendor Email">
+                            </div>
+
+                            <label for="phone">Vendor Phone Number</label>
+                            <div class="input-group mb-4">
+                                <input id="phone" type="text" class="form-control" name="phone" placeholder="Enter Vendor Phone Number">
+                            </div>
+                            <hr>
+
+                            <label for="location">Vendor Location</label>
+                            <div class="input-group mb-4">
+                                <input id="location" type="text" class="form-control" name="location" placeholder="Enter Vendor Location">
+                            </div>
+
+                            <label for="file" class="mt-4">Vendor Cover Picture</label>
+                            <div class="file-image">
+                                <input type="file" name="file" class="text-secondary" id="file">
+                            </div>
+
+                            <!-- submit button  -->
+                            <div class="text-right">
+                                <input type="submit" value="Register Vendor" name="register_vendor" class="btn mt-4 btn-primary">
                             </div>
                         </div>
-                    </div>
 
-                    <button type="submit" name="registerVendor" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+                        <div class="col-lg-4 col-sm-5">
+                                <img src="img/upload.jpg" class="">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
         </div>
     </div>
-
-
-
 </div>
 <!-- /.container-fluid -->
 
