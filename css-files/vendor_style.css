@@ -198,6 +198,9 @@ a[data-toggle="collapse"] {
   display: none;
 }
 */
+.product-order-body-img{
+  margin-top: 25px;
+}
 
 .product-order-body-img:hover{
   box-shadow: 5px 5px 5px grey;
@@ -229,4 +232,170 @@ a[data-toggle="collapse"] {
   border-radius: 5px;
 }
 
+.upload-btn:hover{
+  text-decoration: none;
+  border: 2px solid #F58634;
+  background-color: inherit;
+  cursor: pointer;
+  color: #F58634;
+}
 
+/* item details page */
+
+.img-orange-cont{
+  margin-bottom: 70px;
+}
+.orange-cont{
+  border:2px solid #F58634;
+  width: 75%;
+  height: 420px;
+}
+.image-item{
+  width: 75%;
+  height: 420px;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.prod-det-cont h5{
+  display: inline-flex;
+  color: #F58634;
+  font-weight: bold;
+  border-bottom: 1px solid #F58634;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.prod-det-cont p{
+  border-bottom: 1px solid #80808061;
+  padding: 10px 5px;
+}
+.store-itemdet{
+  color: #F58634;
+  font-weight: bold;
+}
+
+.store-itemdet span{
+  color: black;
+  font-weight: normal;
+}
+
+.edit-btn{
+  padding: 8px 60px ;
+  margin-top: 35px;
+}
+
+
+/* ==== Dashboard Page===*/
+.sales-chart-sm {
+  margin-top: 30px;
+}
+.sales-chart-sm div{
+  background-color: #3A424F;
+  border-radius: 5px;
+  color: white;
+}
+
+.sales-chart-sm div h5{
+  color: #F58634;
+  /*font-style: italic;*/
+  line-height: 1.4em;
+  font-weight: 300;
+  font-size: 0.80rem;
+}
+
+.sales-chart-sm div h3{
+  font-size: 1.4375rem;
+  color: white;
+}
+
+.product-table{
+  margin-top: 90px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+/*======HIGH DEMAND PAGE*/
+.high-de-img{
+  height: 200px;
+}
+
+.edit-img{
+  height: 150px;
+}
+
+.fa-dollar,
+.fa-telegram{
+  font-size: 20px;
+}
+
+   /*====== DELETE MODAL =======*/
+
+.delete-btn{
+  background-color: inherit;
+  padding: 6px 50px;
+  border: 2px solid #F58634;
+  color:#F58634;
+   font-weight: bold;
+}
+
+.delete-btn:hover{
+  background-color: #F58634;
+  color: white;
+}
+
+.fa-check-circle{
+  color: #F58634;
+  font-size: 150px;
+}
+
+
+/*======================== MEDIA QUERIES START HERE======================*/
+@media (max-width:360px){
+  .orange-cont{
+    width: 90%;
+  }
+  .image-item{
+    width: 90%;
+    height: 420px;
+    top: 40px;
+    left: 40px;
+    /*box-shadow: 5px 5px 5px grey;*/
+  }
+}
+
+@media (min-width:601px){
+  
+}
+
+@media (min-width:992px){
+  .img-orange-cont{
+    margin-bottom: 0;
+
+  }
+  .orange-cont{
+    width: 55%;
+  }
+  .image-item{
+    width: 55%;
+    height: 420px;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+  }
+
+  .edit-btn{
+    padding: 5px 20px ;
+  }
+
+  /*==Dashboard Page*/
+  .sales-chart-sm{
+    margin-top: 0;
+  }
+
+  /*====== DELETE MODAL =======*/
+  .delete-btn{
+    padding: 8px 80px;
+  }
+}
