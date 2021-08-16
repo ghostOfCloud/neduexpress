@@ -45,18 +45,18 @@
                         <a href="add-items.html">Add items</a>
                     </li>
                     <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Store items</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Statistics</a>
+                          <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li>
-                                <a href="#">Page 1</a>
+                                <a href="statistics.html">All Stats</a>
+                            </li>
+                             <li>
+                                <a href="finished-products.html">Finished products</a>
                             </li>
                             <li>
-                                <a href="#">Page 2</a>
+                                <a href="high-demand.html">High demand</a>
                             </li>
-                            <li>
-                                <a href="#">Page 3</a>
-                            </li>
-                        </ul>
+                          </ul>
                     </li>
                     <li>
                         <a href="user-profile">Profile</a>
@@ -83,9 +83,64 @@
         <div id="content" class=" p-5 pt-2">
 
             <div class="mycontainhide" id="storeItems">
-                <div>
+                <div class="d-flex justify-content-between">
                     <h4 style="display: inline-flex; border-bottom: 2px solid #F58634"><em>Item ...</em></h4>
+                    <a  href="#deleteModal" data-toggle="modal"><i class="fa fa-trash p-2 d-flex justify-content-center" style=""></i></a>
+
                 </div>
+
+                <!-- ======================= MODAL STARTS HERE ================================== -->
+                    <div class="modal fade" tabindex="-1" id="deleteModal">
+                        <div class="modal-dialog" >
+                            <div class="modal-content p-4">
+                                <div class="modal-header">
+                                    <h5 class="modal-title login-title">Delete Item </h5>
+                                    <button type="button" class="close close-sign" data-dismiss="modal">&times;</button>                
+                                </div>
+                                <div class="modal-body">
+                                    <p> <b>WARNING!! </b> Once this action is taken, there is no going back. Click on 'delete' to delete all the details about this item.</p>
+                                    <p class="text-center"><b>Delete item?</b></p>
+                                </div>
+
+                                    <div class="text-center d-flex justify-content-between mb-3">
+                                        <a href="#dltSuccessModal" data-toggle="modal" data-dismiss="modal" class="btn delete-btn">Delete </a>
+                                        <!-- <button type="button" class="btn delete-btn" data-dismiss="modal">Delete</button> -->
+                                        <button type="button" class="btn login-btn" data-dismiss="modal">Cancel</button>
+                                    </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ======================= DELETE SUCCESS MESSAGE HERE ================================== -->
+                    <div class="modal fade" tabindex="-1" id="dltSuccessModal">
+                        <div class="modal-dialog" >
+                            <div class="modal-content p-4">
+                                <div class="modal-header">
+                                    <h5 class="modal-title login-title">Delete Success </h5>
+                                    <button type="button" class="close close-sign" data-dismiss="modal">&times;</button>                
+                                </div>
+                                <div class="modal-body">
+                                   <p>Item details have been deleted successfully....</p>
+
+                                   <div class="text-center mb-4">
+                                    <span class="fa fa-check-circle animated tada infinite"></span>
+                                   </div>
+                                </div>
+
+                                    <div class="text-right mb-3">
+                                    
+                                        <!-- <button type="button" class="btn delete-btn" data-dismiss="modal">Delete</button> -->
+                                        <button type="button" class="btn login-btn" data-dismiss="modal">CLOSE</button>
+                                    </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============== DASHBOARD CONTENT ===================== -->
+
 
                 <div class="container recomm-img mt-4" style=" ;">
                     <div class="row">
@@ -110,7 +165,7 @@
                             </div>
 
                             <div class="text-right pt-md-4">
-                                <a href="items-details.html" class="upload-btn edit-btn d-inline-flex px-md-5 "> Edit </a>
+                                <a href="edit-items.html" class="upload-btn edit-btn d-inline-flex px-md-5 " > Edit </a>
                             </div>
                         </div>
                     </div>
