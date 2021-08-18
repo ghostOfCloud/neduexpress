@@ -19,7 +19,61 @@ class Database{
         return $connect;
 
     }
+ 
+    protected function CreateDataTables(){
+        $create_table = ("CREATE TABLE IF NOT EXISTS register ( 
+            `id` INT NOT NULL AUTO_INCREMENT ,
+            `userid` INT(11) NOT NULL , 
+            `name` VARCHAR(255) NOT NULL , 
+            `email` VARCHAR(255) NOT NULL , 
+            `password` VARCHAR(255) NOT NULL ,  
+            `status` VARCHAR(255) NOT NULL ,   
+            `date` DATETIME NOT NULL ,  
+            PRIMARY KEY  (`id`),
+            UNIQUE (`userid`)
+        )ENGINE = InnoDB;");
+        $create = $this->connect()->query($create_table);
 
+        $create_table = ("CREATE TABLE IF NOT EXISTS vendors_profile ( 
+            `id` INT NOT NULL AUTO_INCREMENT ,
+            `userid` INT(11) NOT NULL , 
+            `name` VARCHAR(255) NOT NULL , 
+            `email` VARCHAR(255) NOT NULL , 
+            `phone` VARCHAR(255) NOT NULL , 
+            `address` VARCHAR(255) NOT NULL , 
+            `store` VARCHAR(255) NOT NULL ,  
+            `description` VARCHAR(255) NOT NULL ,  
+            `open_hrs` VARCHAR(255) NOT NULL ,  
+            `img` VARCHAR(255) NOT NULL ,  
+            `status` VARCHAR(255) NOT NULL ,  
+            `date` DATETIME NOT NULL ,  
+            PRIMARY KEY  (`id`),
+            FOREIGN KEY (`userid`) REFERENCES register(`userid`)
+        )ENGINE = InnoDB;");
+        $create = $this->connect()->query($create_table);
+
+        $create_table = ("CREATE TABLE IF NOT EXISTS products ( 
+            `id` INT NOT NULL AUTO_INCREMENT ,
+            `userid` INT(11) NOT NULL , 
+            `p_id` INT(11) NOT NULL , 
+            `name` VARCHAR(255) NOT NULL , 
+            `description` VARCHAR(255) NOT NULL , 
+            `price` INT(11) NOT NULL , 
+            `quantity` INT(11) NOT NULL , 
+            `category` VARCHAR(255) NOT NULL ,  
+            `images` VARCHAR(950) NOT NULL ,  
+            `status` INT(11) NOT NULL ,  
+            `date` DATETIME NOT NULL ,  
+            PRIMARY KEY  (`id`),
+            FOREIGN KEY (`userid`) REFERENCES register(`userid`)
+        )ENGINE = InnoDB;");
+        $create = $this->connect()->query($create_table);
+
+      
+        
+   
+    }
+    
     public function Login($email, $password){  
         $this->email = $email;
         $this->password = $password;
@@ -88,6 +142,49 @@ class Database{
         }
     }
 
+    public function MoveProductImages($image, $p_id){
+        // Configure upload directory and allowed file types
+        $upload_dir = '../File Manager'.DIRECTORY_SEPARATOR;
+        $allowed_types = array('jpg', 'png', 'jpeg', 'gif');
+        $img = array();
+
+        // Define maxsize for files i.e 2MB
+        $maxsize = 2 * 1024 * 1024;
+
+        // Loop through each file in files[] array
+        foreach ($_FILES['files']['tmp_name'] as $key => $value) {
+            $file_tmpname = $_FILES['files']['tmp_name'][$key];
+            $file_name = $_FILES['files']['name'][$key];
+            $file_size = $_FILES['files']['size'][$key];
+            $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
+
+            // Set upload file path and file New name
+            $filepath = $upload_dir.$p_id.$file_name;
+            $fileName = $p_id.$file_name;
+
+            // Check file type is allowed or not
+            if(in_array(strtolower($file_ext), $allowed_types)) {
+                // Verify file size - 2MB max
+                if ($file_size < $maxsize) {       
+                    if( move_uploaded_file($file_tmpname, $filepath)) {
+                        array_push($img,$fileName);   
+                    }else {                    
+                        // return false;
+                    }
+                        
+                }else{ 
+                    // return false;
+                }
+            }
+
+            // print_r($img);
+
+        }
+        $imgs = json_encode($img);
+        return $imgs;
+
+    }
+
     public function IdGenerator($table){
 
         $gen = uniqid(1,2);
@@ -95,7 +192,7 @@ class Database{
         $generated_id = $explode[1];        
 
         //Check if Generated Id Already exisits on DB
-        $sql1 = "SELECT * FROM $table WHERE userid='$generated_id' OR productid='$generated_id' ";
+        $sql1 = "SELECT * FROM $table WHERE userid='$generated_id' OR p_id='$generated_id' ";
         $query1 = $this->connect()->query($sql1);
         $numRows1 = $query1->num_rows;
         if($numRows1 > 0){
@@ -115,41 +212,8 @@ class Database{
         return $generated_id;
     }
 
-    protected function CreateDataTables(){
-        $create_table = ("CREATE TABLE IF NOT EXISTS register ( 
-            `id` INT NOT NULL AUTO_INCREMENT ,
-            `userid` VARCHAR(255) NOT NULL , 
-            `name` VARCHAR(255) NOT NULL , 
-            `email` VARCHAR(255) NOT NULL , 
-            `password` VARCHAR(255) NOT NULL ,  
-            `status` VARCHAR(255) NOT NULL ,   
-            `date` DATETIME NOT NULL ,  
-            PRIMARY KEY  (`id`),
-            UNIQUE (`userid`)
-        )ENGINE = InnoDB;");
-        $create = $this->connect()->query($create_table);
 
-        $create_table = ("CREATE TABLE IF NOT EXISTS vendors_profile ( 
-            `id` INT NOT NULL AUTO_INCREMENT ,
-            `userid` VARCHAR(255) NOT NULL , 
-            `name` VARCHAR(255) NOT NULL , 
-            `email` VARCHAR(255) NOT NULL , 
-            `phone` VARCHAR(255) NOT NULL , 
-            `address` VARCHAR(255) NOT NULL , 
-            `store` VARCHAR(255) NOT NULL ,  
-            `description` VARCHAR(255) NOT NULL ,  
-            `open_hrs` VARCHAR(255) NOT NULL ,  
-            `img` VARCHAR(255) NOT NULL ,  
-            `status` VARCHAR(255) NOT NULL ,  
-            `date` DATETIME NOT NULL ,  
-            PRIMARY KEY  (`id`),
-            FOREIGN KEY (`userid`) REFERENCES register(`userid`)
-        )ENGINE = InnoDB;");
-        $create = $this->connect()->query($create_table);
 
-      
-        
-   
-    }
-    
+
+  
 }

@@ -8,7 +8,7 @@ if(isset($_POST["p_upload"])){
     $price = $_POST["p_price"];
     $quantity = $_POST["p_quantity"];
     $category = $_POST["p_category"];
-    $image = $_POST["p_image"];
+    $image = $_FILES['files']['name'];
 
 
     $object->UploadProduct($title, $description, $price, $quantity, $category, $image);

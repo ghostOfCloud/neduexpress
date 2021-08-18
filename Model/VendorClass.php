@@ -1,7 +1,7 @@
 <?php
 require "DB.Connect.Table.php";
 
-class Vendor extends Database{
+class Vendors extends Database{
     
     public function UploadProduct($title, $description, $price, $quantity, $category, $image){
         $this->title = $title;
@@ -10,7 +10,11 @@ class Vendor extends Database{
         $this->quantity = $quantity;
         $this->category = $category;
         $this->image = $image;
+        $userid = $_SESSION['userid'];
+        // $images = array();
 
+        //Create Product table id not existing on the database
+        $this->CreateDataTables();
 
         //Mysql Escape Strings
         $title = mysqli_escape_string($this->connect(), $title);
@@ -19,14 +23,29 @@ class Vendor extends Database{
         $quantity = mysqli_escape_string($this->connect(), $quantity);
         $category = mysqli_escape_string($this->connect(), $category);
 
-        //Create Product table id not existing on the database
-        $this->CreateDataTables();
-
         //Generate ID for Product
         $table = "products";
-        $userid = $this->IdGenerator($table);
+        $p_id = $this->IdGenerator($table);
+
+        //Move Product Image to destination folder and return img  newname
+        $imgs = $this->MoveProductImages($image,$p_id);
+        // echo $imgs;
+
+
+        $sql = "INSERT INTO products SET userid='$userid', p_id='$p_id', name='$title', description='$description', price='$price', quantity='$quantity', category='$category', images='$imgs', status='0', date=NOW() ";
+        $query = $this->connect()->query($sql);
+        if($query){
+            echo "done";
+        }else{
+            echo "upload failed";
+        }
+      
+
+        
+        
 
     }
+    
 }
 
 
