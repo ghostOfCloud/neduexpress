@@ -32,7 +32,7 @@
                     <a href="#" class="nav-item nav-link active">Home</a>
                     <a href="#" class="nav-item nav-link">Profile</a>
                     <a href="#" class="nav-item nav-link">Messages</a>
-                    <a href="#loginModal" data-toggle="modal" class="nav-item nav-link">Login</a>
+                    <a href="login.html" data-toggle="modal" class="nav-item nav-link">Login</a>
                     <a href="#" class="nav-item nav-link"><i>Register</i></a>
                 </div>
             </div>

@@ -19,7 +19,7 @@ class Products extends Vendors{
                         <div class='carousel-prod-list'>
                             <img src='File Manager/$cover' class='img-fluid' style='width:100%; height: 100px'>
                             <div class='p-2'>
-                                <a href='product-order.php?product=$img&&id=$row[p_id]&&cover=$cover' style='padding: 6px 60px 6px 0;'><i> N $row[price] </i></a>
+                                <a href='product-order.php?ert1@3)\|)9$row[images]erd&&id=$row[p_id]&&cover=$cover' style='padding: 6px 60px 6px 0;'><i> N $row[price] </i></a>
                             </div>
                         </div>
                     </div>
@@ -34,6 +34,18 @@ class Products extends Vendors{
     }
 
     public function ProductOrder(){
-        $sql = "SELECT * FROM product WHERE p_id={$p_id} AND "
+        $p_id = $_GET["id"];
+        $sql = "SELECT * FROM products WHERE p_id={$p_id} ";
+        $query = $this->connect()->query($sql);
+        $num_rows = $query->num_rows;
+        if($num_rows > 0){
+            while($row = $query->fetch_assoc()){ 
+                $rows[] = $row;
+            }
+        }else{
+           echo "<script>history.back();</script>";
+        }
+
+        return $rows;
     }
 } 

@@ -45,7 +45,37 @@ class Vendors extends Database{
         
 
     }
-    
+
+    public function AllProducts(){
+        $userid = $_SESSION["userid"];
+
+        $sql = "SELECT * FROM products WHERE userid={$userid} ";
+        $query = $this->connect()->query($sql);
+        $numRows = $query->num_rows;
+        if($numRows > 0){
+            while($row = $query->fetch_assoc()){
+                $img = json_decode($row["images"]);
+                $cover = $img[0];
+
+                $rows[] = "
+                    <div class='col-md-4 col-sm-6 col-6'>
+                        <div class='product-order-body-img'>
+                            <a href='items-details.html'>
+                                <img src='../File Manager/$cover' class='img-fluid'>
+                            </a>
+                        </div>
+
+                       
+                    </div>
+                ";
+
+            }
+        }else{
+            $rows[] = "No Record Found";
+        }
+    return $rows;
+
+    }
 }
 
 

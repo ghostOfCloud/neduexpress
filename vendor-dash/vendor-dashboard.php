@@ -1,3 +1,5 @@
+<?php require "../Model/VendorClass.php"; $object = new Vendors(); ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -93,21 +95,15 @@
 
                 <div class="container recomm-img mt-4">
                     <div class="row">
-                        <div class="col-md-4 col-sm-6 col-6">
-                            <div class="product-order-body-img">
-                                <a href="items-details.html">
-                                    <img src="../images/product_img/portfolio-1.jpg" class="img-fluid">
-                                </a>
-                            </div>
+                        <!-- <div class="col-md-4 col-sm-6 col-6"> -->
+                            <?php 
+                            foreach($object->AllProducts() as $products){
+                                echo $products;
+                            } 
+                            ?>
+                        <!-- </div> -->
 
-                            <div class="product-order-body-img mt-3">
-                                <a href="items-details.html">
-                                    <img src="../images/product_img/portfolio-8.jpg" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-sm-6 col-6">
+                        <!-- <div class="col-md-4 col-sm-6 col-6">
                             <div class="product-order-body-img">
                                 <a href="items-details.html">
                                     <img src="../images/product_img/portfolio-3.jpg" class="img-fluid">
@@ -133,7 +129,7 @@
                                     <img src="../images/product_img/portfolio-2.jpg" class="img-fluid">
                                 </a>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>

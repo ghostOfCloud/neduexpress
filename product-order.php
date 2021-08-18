@@ -1,3 +1,5 @@
+<?php require "Model/ProductClass.php"; $object = new Products; foreach ($object->ProductOrder() as $product){} ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -52,20 +54,20 @@
 
             <div class="col-lg-7 col-sm-5">
                 <div class="pl-md-2 product-order-det mt-md-1">
-                    <h4>Hot Sale Solid Color Casual Men's Slim Sportswear Sports Solid Color Men's Fitness Cotton Jogging Thin Sweat Casual Trousers</h4>
+                    <!-- <h4>Hot Sale Solid Color Casual Men's Slim Sportswear Sports Solid Color Men's Fitness Cotton Jogging Thin Sweat Casual Trousers</h4> -->
+                    <h4><?php echo $product["description"]; ?></h4>
 
                     <hr>
 
                     <div class="item-price d-flex">
-                        <p class="item-price-main">&#8358; 4,000</p>
-                        <p class="pl-2"><i><del>&#8358; 10,000</del></i></p>
+                        <p class="item-price-main">&#8358; <?php echo $product["price"]; ?></p>
+                        <!-- <p class="pl-2"><i><del>&#8358; 10,000</del></i></p> -->
                     </div>
 
                     <div class="pt-md-4">
                         <div>Quantity:</div>
                         <div class="d-flex">
-                            <p>pick 1</p>
-                            <p><span>500</span> pieces available</p>
+                            <p>pick 1 of <span>(<?php echo $product["quantity"]; ?>)</span> pieces available</p>
                         </div>
                     </div>
 
