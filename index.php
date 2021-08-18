@@ -152,51 +152,6 @@
                             } 
                         ?>
                         
-
-                        <!-- <div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2">
-                            <div class="carousel-prod-list">
-                                <img src="images/product_img/portfolio-9.jpg" class="img-fluid" style="width:100%; height: 100px">
-                                <div class="p-2">
-                                    <a href="product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2">
-                            <div class="carousel-prod-list">
-                                <img src="images/product_img/portfolio-1.jpg" class="img-fluid" style="width:100%; height: 100px">
-                                <div class="p-2">
-                                    <a href="product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2">
-                            <div class="carousel-prod-list">
-                                <img src="images/product_img/portfolio-5.jpg" class="img-fluid" style="width:100%; height: 100px">
-                                <div class="p-2">
-                                    <a href="product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2">
-                            <div class="carousel-prod-list">
-                                <img src="images/product_img/portfolio-1.jpg" class="img-fluid" style="width:100%; height: 100px">
-                                <div class="p-2">
-                                    <a href="product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2">
-                            <div class="carousel-prod-list">
-                                <img src="images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%; height: 100px">
-                                <div class="p-2">
-                                    <a href="product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>

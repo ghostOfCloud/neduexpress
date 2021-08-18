@@ -19,7 +19,7 @@ class Products extends Vendors{
                         <div class='carousel-prod-list'>
                             <img src='File Manager/$cover' class='img-fluid' style='width:100%; height: 100px'>
                             <div class='p-2'>
-                                <a href='product-order.html' style='padding: 6px 60px 6px 0;'><i> N 5000 </i></a>
+                                <a href='product-order.html' style='padding: 6px 60px 6px 0;'><i> N $row[price] </i></a>
                             </div>
                         </div>
                     </div>
