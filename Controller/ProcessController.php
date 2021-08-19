@@ -12,4 +12,14 @@ if(isset($_POST["p_upload"])){
 
 
     $object->UploadProduct($title, $description, $price, $quantity, $category, $image);
+}elseif(isset($_POST["p_edit"])){
+    $p_id = $_POST["p_id"];
+    $title = $_POST["p_name"];
+    $description = $_POST["p_description"];
+    $price = $_POST["p_price"];
+    $quantity = $_POST["p_quantity"];
+    $category = $_POST["p_category"];
+
+
+    $object->EditProduct($title, $description, $price, $quantity, $category, $p_id);
 }
