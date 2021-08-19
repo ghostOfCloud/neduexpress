@@ -11,8 +11,8 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 Class PhpMail extends Database{
-    private $host = "www.growvestfx.com";
-    private $username = "info@growvestfx.com";
+    private $host = "www.growvest.org";
+    private $username = "info@growvest.org";
     private $password = "passwordAsM";
     private $host_name = "Growvest Limited";
 
@@ -34,7 +34,7 @@ Class PhpMail extends Database{
             //Recipients
             $mail->setFrom($this->username, $this->host_name);
             $mail->addAddress($email, $email);        // Add a recipient
-            $mail->AddBCC('info@growvestfx', 'Admin');      // Add a recipient
+            $mail->AddBCC('info@growvest.org', 'Admin');      // Add a recipient
 
         
             // Content
@@ -51,13 +51,13 @@ Class PhpMail extends Database{
                 For reference, here is your login information: <br/>
                     Email: $email <br/>
                     Password: $password <br/>
-                    Login Page: http://www.growvestfx.com/login.html <br/> <br/>
+                    Login Page: http://www.growvest.org/login.html <br/> <br/>
 
                 We recommend that you explore our available funds portfolio <br/><br/>
 
                 The next step is to login and deposit to your balance to start earning on our platform and also have access to our amazing benefits<br/><br/>
 
-                If you have any questions, feel free to contact our customer support team via contact@growvestfx.com.<br/><br/>
+                If you have any questions, feel free to contact our customer support team via contact@growvest.org.<br/><br/>
 
                 Thanks,<br/>
                 Growvest Limited <br/><br/>
@@ -98,7 +98,7 @@ Class PhpMail extends Database{
             //Recipients
             $mail->setFrom($this->username, $this->host_name);
             $mail->addAddress($email, $name);  
-            $mail->AddBCC('info@growvestfx.com', 'Admin');      // Add a recipient
+            $mail->AddBCC('info@growvest.org', 'Admin');      // Add a recipient
 
             // Content
             $mail->isHTML(true);                                        // Set email format to HTML
@@ -118,9 +118,9 @@ Class PhpMail extends Database{
                 <li><span class='text-bold text-success'>Wallet Address: <span>1KKVP5eVX47Xdp2wpWg25pmhbnwcecMFo6 </li>
                 </ul>
 
-                If you did not initiate this action, please contact our support team immediately via info@growvestfx.com !. <br/>
+                If you did not initiate this action, please contact our support team immediately via info@growvest.org !. <br/>
 
-                If you have any questions, feel free to contact our customer support team via contact@growvestfx.com <br/><br/>
+                If you have any questions, feel free to contact our customer support team via contact@growvest.org <br/><br/>
 
                 Thanks, <br/>
                 Growvest Limited <br/><br/><br/>
@@ -181,9 +181,9 @@ Class PhpMail extends Database{
                     Validity Period: $validity_period <br/><br/><br/>
                 
 
-                If you did not initiate this action, please contact our support team immediately via info@growvestfx.com !. <br/>
+                If you did not initiate this action, please contact our support team immediately via info@growvest.org !. <br/>
 
-                If you have any questions, feel free to contact our customer support team via contact@growvestfx.com.<br/><br/><br/>
+                If you have any questions, feel free to contact our customer support team via contact@growvest.org.<br/><br/><br/>
 
                 Thanks,<br/>
                 Growvest Limited<br/><br/>
@@ -238,9 +238,9 @@ Class PhpMail extends Database{
 
                 Kindly proceed to initiate deposit on your account <br/><br/>
                 
-                If you did not initiate this action, please contact our support team immediately via contact@growvestfx.com !. <br/>
+                If you did not initiate this action, please contact our support team immediately via contact@growvest.org !. <br/>
 
-                If you have any questions, feel free to contact our customer support team via contact@growvestfx.com.<br/><br/><br/>
+                If you have any questions, feel free to contact our customer support team via contact@growvest.org.<br/><br/><br/>
 
                 Thanks,<br/>
                 Growvest Limited<br/><br/>
@@ -297,9 +297,9 @@ Class PhpMail extends Database{
                     Amount: $amount <br/>
                     Destination Wallet Addres: $wallet <br/>                
 
-                If you did not initiate this action, please contact our support team immediately via info@growvestfx.com !. <br/>
+                If you did not initiate this action, please contact our support team immediately via info@growvest.org !. <br/>
 
-                If you have any questions, feel free to contact our customer support team via contact@growvestfx.com <br/><br/><br/>
+                If you have any questions, feel free to contact our customer support team via contact@growvest.org <br/><br/><br/>
 
                 Thanks,<br/>
                 Growvest Limited<br/><br/>
@@ -356,9 +356,9 @@ Class PhpMail extends Database{
                     Amount: $amount <br/>
                     Destination Wallet Addres: $wallet <br/>                
 
-                If you did not initiate this action, please contact our support team immediately via info@growvestfx.com !. <br/>
+                If you did not initiate this action, please contact our support team immediately via info@growvest.org !. <br/>
 
-                If you have any questions, feel free to contact our customer support team via contact@growvestfx.com.<br/><br/><br/>
+                If you have any questions, feel free to contact our customer support team via contact@growvest.org.<br/><br/><br/>
 
                 Thanks,<br/>
                 Growvest Limited<br/><br/>
