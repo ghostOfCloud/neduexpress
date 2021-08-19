@@ -126,6 +126,59 @@ class Vendors extends Database{
 
     }
 
+    public function VendorProfile(){
+        $userid = $_SESSION["userid"];
+
+        $sql = "SELECT * FROM vendors_profile WHERE userid ={$userid} ";
+        $query = $this->connect()->query($sql);
+        $numRows = $query->num_rows;
+        if ($numRows > 0){
+            while($row = $query->fetch_assoc()){
+                $rows[] = $row;
+            }
+
+        }else{
+            echo "<script> history.back(); </script>";
+        }
+
+        return $rows;
+
+    }
+
+    public function EditProfile($fname, $l_name, $email, $store_name, $store_desc, $location, $phone){
+        $this->fname = $fname;
+        $this->l_name = $l_name;
+        $this->email = $email;
+        $this->store_name = $store_name;
+        $this->store_desc = $store_desc;
+        $this->location = $location;
+        $this->phone = $phone;
+        $userid = $_SESSION['userid'];
+    
+        //Mysql Escape Strings
+        $fname = mysqli_escape_string($this->connect(), $fname);
+        $l_name = mysqli_escape_string($this->connect(), $l_name);
+        $email = mysqli_escape_string($this->connect(), $email);
+        $store_name = mysqli_escape_string($this->connect(), $store_name);
+        $store_desc = mysqli_escape_string($this->connect(), $store_desc);
+        $location = mysqli_escape_string($this->connect(), $location);
+        $phone = mysqli_escape_string($this->connect(), $phone);
+
+    
+        $sql = "UPDATE vendors_profile SET name='$fname', l_name='$l_name', email='$email', store='$store_name', description='$store_desc', address='$location', phone='$phone', status='0' WHERE  userid={$userid} ";
+        $query = $this->connect()->query($sql);
+        if($query){
+            echo "done";
+        }else{
+            echo "upload failed";
+        }
+      
+
+        
+        
+
+    }
+
     
 }
 

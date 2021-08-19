@@ -22,4 +22,15 @@ if(isset($_POST["p_upload"])){
 
 
     $object->EditProduct($title, $description, $price, $quantity, $category, $p_id);
+}elseif(isset($_POST["save_profile"])){
+    $fname = $_POST["fname"];
+    $l_name = $_POST["lname"];
+    $email = $_POST["email"];
+    $store_name = $_POST["store_name"];
+    $store_desc = $_POST["store_desc"];
+    $location = $_POST["location"];
+    $phone = $_POST["phone"];
+
+    $object->EditProfile($fname, $l_name, $email, $store_name, $store_desc, $location, $phone);
+
 }
