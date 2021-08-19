@@ -76,6 +76,9 @@
                     <li>
                         <a href="user-profile.php">Profile</a>
                     </li>
+                    <li>
+                        <a href="logout.php">Log out</a>
+                    </li>
                     <!-- <li>
 	              <a href="#">Contact</a>
 		          </li> -->
