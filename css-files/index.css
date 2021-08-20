@@ -95,7 +95,6 @@ hr{
 		/*LOGIN DESIGN*/
 .modal-content{
 	background-color: #F7F7F7;
-	/*background-color: #3A424F;*/
 }
 .login-btn{
 	background-color: #F58634;
@@ -263,13 +262,20 @@ hr{
 }
 
 .seller-detail-nav{
+	display: block;
+}
+
+.seller-detail-cont{
 	display: flex;
 	justify-content: space-between;
 }
 
+
 .seller-main{
-	width: 22%;
+	width: 100%;
 	padding: 0 5px;
+	border-bottom: 1px solid grey;
+	margin-bottom: 10px;
 }
 
 #visit{
@@ -364,8 +370,183 @@ footer{
 }
 
 
+		/*========== ADD TO CART PAGE*/
+
+.added-items-cont{
+	width: 65%;
+}
+
+#cart-title{
+	background-color: #3A424F;
+	color: #F58634;
+	font-style: italic;
+	border-radius: 5px;
+}
+
+#cart-title h3{
+	font-weight: bold;
+}
+
+.added-items{
+	background-color: #F7F7F7;
+	border: 1px solid #ddd;
+	/*background-color: grey;*/
+}
+
+.cart_storeName{
+	border-bottom: 1px solid #ddd;
+}
+
+/*.cart_storeName input{
+	border: none;
+	outline: none;
+}*/
+
+.cart_storeName a{
+	color: #F58634;
+	font-style: italic;
+	text-decoration: none;
+	/*font-weight: bold;*/
+	margin-left: 7px;
+}
+
+.cart_storeName a:hover{
+	color: #3A424F;
+	font-weight: bold;
+}
+
+.cart-details{
+	width: 83%;
+}
+
+.cart-item-checkbx{
+	width: 2%;
+}
+
+.cart-item-img{
+	border: 1px solid #ddd;
+	width: 18%;
+	height: 120px;
+}
+
+.cart-item-img img{
+	width: 100%;
+	height: 100%;
+}
+
+.itm-nameprice{
+	width: 72%;
+}
+
+.itm-nameprice>p{
+	color: #F58634;
+	font-weight: bold;
+}
+
+.itm-colorlocatn p,
+.delvry-fee{
+	margin: 0;
+	color: #3A424F;
+	font-size: 14px;
+}
+
+.itm-colorlocatn p span{
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+.delvry-price{
+	font-weight: bold;
+	color: #F58634;
+}
+
+.delvry-fee{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.delvry-fee span{
+	font-weight: normal;
+}
+
+.item-editfeat-cont{
+	width: 15%;
+	height: 100%;
+	border-left: 1px solid grey;
+	margin-top: 5px;
+	padding:0 20px;
+}
+
+.cart-delet-itm .fa-trash{
+	font-size: 25px;
+	color: #3A424F;
+}
+
+.buy-btn-cont{
+	padding-top: 10px;
+	margin-bottom: 15px;
+}
+.buy-btn-cont a{
+	border: 1px solid #F58634;
+	background-color: #F58634;
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: white;
+	text-decoration: none;
+}
+
+.buy-btn-cont a:hover{
+	background-color: inherit;
+	color: #F58634;
+}
 
 
+.checkout-box{
+	/*border: 1px solid grey;*/
+	width: 30%;
+	height: 100%;
+	background-color: #3A424F;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.checkout-box h4{
+	color: #F58634;
+	font-weight: bold;
+}
+
+.checkout-total{
+	margin-top: 25px;
+	color: white;
+	padding-bottom: 15px;
+	border-bottom: 1px solid grey;
+}
+
+.total-sum{
+	margin-top: 10px;
+	padding: 0 10px;
+	font-size: 20px;
+	color: #F58634;
+	font-weight: bold;
+}
+
+.cart-order-btn{
+	margin: 20px 10px;
+}
+.cart-order-btn a{
+	border: 2px solid #F58634;
+	background-color: #F58634;
+	padding: 5px 30px;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.cart-order-btn a:hover{
+	background-color: inherit;
+	color: #F58634;
+}
 /*========================   MEDIA QUERIES START HERE  ===========================*/
 
 /*for desktop*/
@@ -382,6 +563,10 @@ footer{
 		padding: 8px 80px;
 	}
 
+	/*.cart-logo img{
+		width: 10%;
+	}*/
+
 	.product-order-body {
 		margin-top: 80px;
 		padding: 0 20px;
@@ -395,6 +580,22 @@ footer{
 
 	.register-img{
 		display: none;
+	}
+
+	.seller-main{
+		width: 45%;
+		padding: 0 5px;
+		border: 0;
+		margin:0;
+	}
+
+	.seller-detail-nav{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.seller-main-form{
+		width: 45%;
 	}
 }
 
@@ -501,6 +702,10 @@ footer{
 
 
 	/*======= Product Page design=========*/
+	.seller-detail-nav{
+		display: flex;
+		justify-content: space-between;
+	}
 	.product-header div img{
 		width:6%;
 		margin-left: 50px;
@@ -516,6 +721,14 @@ footer{
 		padding: 9px 20px;
 		border-radius: 5px;
 	}
+
+	.seller-main{
+		width: 22%;
+		padding: 0 5px;
+		border:none;
+		margin:0;
+	}
+
 
 	/*=====================FOOTER===============*/
 
