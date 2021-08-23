@@ -9,7 +9,7 @@
 
                 <div class="container recomm-img mt-4">
                     <div class="container">
-                        <form method="POST" action="../Controller/ProcessController.php" enctype="multipart/form-data" id="uploadForm">
+                        <form method="POST" action="../Controller/ProcessController.php" enctype="multipart/form-data" id="form">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-8 col-sm-7" style="border-right: 1px solid grey">
@@ -57,9 +57,11 @@
                                             </div>
                                         </div>
 
-                                        <div class="file-image mt-4">
+                                        <!-- NEW -->
+                                        <div class="file-image mt-4" >
                                             <label for="inputEmail"><em>Product Images:</em></label><br>
-                                            <input type="file" name="files[]" class="text-secondary" multiple id="file">
+                                            <input type="file" name="image" name="files[]" id="image" multiple="" class="d-none" onchange="image_select()">
+                                            <button class="upload-btn" type="button" onclick="document.getElementById('image').click()">Choose Image</button>
                                         </div>
 
                                         <!-- submit button  -->
