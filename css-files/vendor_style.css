@@ -240,6 +240,20 @@ a[data-toggle="collapse"] {
   color: #F58634;
 }
 
+/*preview images (add-items page)*/
+.product-order-body-img div span{
+  top: -8px;
+  right: 5px;
+  color: midnightblue;
+  font-size: 28px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.product-order-body-img div span:hover{
+  color:red;
+}
+
 /* item details page */
 
 .img-orange-cont{
