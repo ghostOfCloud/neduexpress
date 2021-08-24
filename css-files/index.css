@@ -547,6 +547,40 @@ footer{
 	background-color: inherit;
 	color: #F58634;
 }
+
+.confirm-items div>h4,
+.pay-opt>h5{
+	display: inline-flex;
+	border-bottom: 2px solid #F58634;
+	font-style: italic;
+	padding: 5px;
+	margin: 5px;
+}
+
+.user-info{
+	color: white;
+}
+
+.pay-opt{
+	border-bottom: 1px solid #ddd;
+	padding: 15px 5px 5px 15px ;
+}
+
+.payout-totalprice{
+
+}
+.payout-price{
+	font-weight: bold;
+	font-size: 23px;
+}
+
+.place-order-btn a{
+	display: block;
+	text-align: center;
+	padding: 8px 0;
+}
+
+
 /*========================   MEDIA QUERIES START HERE  ===========================*/
 
 /*for desktop*/
