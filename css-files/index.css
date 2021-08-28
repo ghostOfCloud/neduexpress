@@ -3,11 +3,14 @@ body{
 }
 .hero{
 	background-color: #3A424F;
-	padding-bottom: : 40px;
+	height: 100%;
+	padding-bottom: 50px;
 }
 
 .mynavbar{
 	padding: 15px 0;
+	background-color: #3A424F;
+	margin-bottom: 5px;
 }
 
 .navbar-nav a{
@@ -20,7 +23,7 @@ body{
 }
 
 .myheronav{
-	margin-top: 5px;
+	margin-top: 0;
 }
 
 .herotext{
@@ -90,6 +93,52 @@ hr{
 .register-button:hover{
 	background-color: #F58634;
 	box-shadow: 5px 5px 5px #C65705;
+}
+
+/*=========NAVBAR CART DESIGN AND FIXED TAB ======*/
+
+#navbarCollapse .navbar-nav .fa-shopping-cart,
+#navbarCollapse .navbar-nav div{
+	display: none;
+}
+
+.toggle-cont .navbar-nav .fa-shopping-cart{
+	font-size: 25px;
+	margin-right: 10px;
+}
+
+.shop-itemNum {
+	position: relative;
+}
+
+.shop-itemNum div{
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	color: white;
+	background-color: #F58634;
+	padding: 2px 5px 3px 3px;
+	border-radius: 50%;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.shop-itemNum:hover{
+	cursor: pointer;
+}
+
+.fa-bars{
+	color: white;
+	/*background-color:  #F58634;*/
+	/*font-size: 14px;*/
+}
+
+.sticky{
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	z-index: 1;
+	transition: 0.5s;
 }
 
 		/*LOGIN DESIGN*/
@@ -583,6 +632,12 @@ footer{
 
 /*========================   MEDIA QUERIES START HERE  ===========================*/
 
+@media (max-width: 767px){
+	.toggle-cont .navbar-nav .fa-shopping-cart{
+		display: block;
+	}
+}
+
 /*for desktop*/
 @media (min-width:601px){
 	.hero{
@@ -630,6 +685,12 @@ footer{
 
 	.seller-main-form{
 		width: 45%;
+	}
+
+	#navbarCollapse .navbar-nav .fa-shopping-cart{
+		font-size: 20px;
+		margin-right: 10px;
+
 	}
 }
 
@@ -714,6 +775,39 @@ footer{
 
 	.carousel-display{
 		width: 80%;
+	}
+
+	/*============== navbar car and fixed tab =======================*/
+	
+	#navbarCollapse .navbar-nav .fa-shopping-cart{
+		display: block;
+		font-size: 25px;
+	}
+
+	#navbarCollapse .navbar-nav div{
+		display: block;
+	}
+
+	.toggle-cont .shop-itemNum div{
+		display: none;
+	}
+	.toggle-cont .navbar-nav .fa-shopping-cart{
+		display: none;
+	}
+
+	.shop-itemNum {
+		position: relative;
+	}
+	.shop-itemNum div{
+		position: absolute;
+		top: -5px;
+		right: -5px;
+		color: white;
+		background-color: #F58634;
+		padding: 2px 5px 3px 3px;
+		border-radius: 50%;
+		font-size: 10px;
+		font-weight: bold;
 	}
 
 	/*======================= CATEGRORY =======================*/
