@@ -12,28 +12,41 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 
-<body>
+<body onscroll="scrolldiv()">
 
     <!-- NAVBAR -->
     <div class="hero ">
-        <nav class="navbar navbar-expand-md d-flex justify-content-between align-items-center px-5 mynavbar">
+        <nav class="navbar navbar-expand-md d-flex justify-content-between align-items-center px-md-5 px-3 mynavbar" id="topnavid">
             <div>
                 <a href="index.html">
                     <img src="images/logo_img.PNG" width="80px">
                 </a>
             </div>
 
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-		        <span class="navbar-toggler-icon" style="background-color: #F58634"></span>
-		    </button>
+            <div  class="d-flex justify-content-between align-items-center toggle-cont">
+                <div class="navbar-nav shop-itemNum">
+                        <a href="add_tocart.html"> <span class="fa fa-shopping-cart"></span></a>
+                        <div> 100 </div>
+                    </div>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon fa fa-bars d-flex justify-content-center align-items-center"></span>
+                </button>
+            </div>
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">Profile</a>
-                    <a href="#" class="nav-item nav-link">Messages</a>
-                    <a href="login.html" data-toggle="modal" class="nav-item nav-link">Login</a>
-                    <a href="#" class="nav-item nav-link"><i>Register</i></a>
+                <div class="d-flex justify-content-between align-items-center" style="width: 100%">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link active">Home</a>
+                        <a href="#" class="nav-item nav-link">Profile</a>
+                        <a href="#" class="nav-item nav-link">Messages</a>
+                        <a href="login.html" data-toggle="modal" class="nav-item nav-link">Login</a>
+                        <a href="#" class="nav-item nav-link"><i>Register</i></a>
+                    </div>
+
+                     <div class="navbar-nav shop-itemNum">
+                        <a href="add_tocart.html"> <span class="fa fa-shopping-cart"></span></a>
+                        <div> 100 </div>
+                    </div>
                 </div>
             </div>
 
