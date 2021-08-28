@@ -36,6 +36,14 @@
 // 	openTabs(event, 'dashboard');
 // }
 
+
+// ======================= NAV FIXED ON SCROLL ===========
+
+function scrolldiv(){
+	var header = document.getElementById('topnavid');
+	header.classList.toggle("sticky", scrollY > 0);
+}
+
 // ================== IMAGE PREVIEW =======================
 
 var images = [];
