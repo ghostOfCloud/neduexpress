@@ -59,6 +59,21 @@
                     <li>
                         <a href="add-items.php">Add items</a>
                     </li>
+
+                    <!-- NEW FEATURES ================== -->
+                    <li>
+                      <a href="#ordermenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orders</a>
+                      <ul class="collapse list-unstyled" id="ordermenu">
+                        <li>
+                            <a href="buyer_orders.html">Pending</a>
+                        </li>
+                         <li>
+                            <a href="completed_orders.html">Completed Delivery</a>
+                        </li>
+                       
+                      </ul>
+                  </li>
+
                     <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Statistics</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
