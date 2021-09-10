@@ -364,6 +364,32 @@ a[data-toggle="collapse"] {
   font-size: 150px;
 }
 
+/*========================  ALL ORDERS DELIVERIES MADE ==============*/
+.azorders table thead{
+  color: #3A424F;
+  font-weight: bold;
+}
+
+.azorders table tbody tr td{
+  color: #3A424F;
+}
+
+.azorders table tbody tr td a{
+  color: #F58634;
+  text-decoration: none;
+}
+
+.azorders table tbody tr td a:hover{
+  color: #3A424F;
+  text-decoration: none; 
+}
+
+.azorders table tbody tr td .fa-check{
+  color: #F58634;
+  font-size: 20px;
+}
+
+
 
 /*======================== MEDIA QUERIES START HERE======================*/
 @media (max-width:360px){
