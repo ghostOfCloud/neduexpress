@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-lg-5 col-sm-7">
                 <div class="product-order-body-img product-order-cont">
-                    <img src="images/product_img/d1.jpg" class="img-fluid">
+                    <img src="images/product_img/d1.jpg" class="img-fluid img-to-change">
                 </div>
             </div>
 
@@ -71,6 +71,50 @@
                         </div>
                     </div>
 
+                    <div class="pt-md-4">
+                    <div><b>Choose item:</b></div>
+                    <div class="container">
+                        <div class="row prod-imgset-row">
+                            <div class="col-lg-2  col-sm-4 col-4 prod-imgset-contain">
+                                <div class="mt-2 b-active" style="height: 50px" onclick="changeimg(this)">
+                                    <img src="images/product_img/portfolio-7.jpg" class="img-fluid" style="width:100%;height: 100%">
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-2 col-sm-4 col-4 prod-imgset-contain">
+                                <div class="mt-2" style="height: 50px" onclick="changeimg(this)">
+                                    <img src="images/product_img/portfolio-9.jpg" class="img-fluid" style="width:100%;height: 100%">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-sm-4 col-4 prod-imgset-contain">
+                                <div class="mt-2" style="height: 50px" onclick="changeimg(this)">
+                                    <img src="images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%;height: 100%">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-sm-4 col-4 prod-imgset-contain">
+                                <div class="mt-2" style="height: 50px" onclick="changeimg(this)">
+                                    <img src="images/product_img/portfolio-4.jpg" class="img-fluid" style="width:100%;height: 100%">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-sm-4 col-4 prod-imgset-contain">
+                                <div class="mt-2" style="height: 50px" onclick="changeimg(this)">
+                                    <img src="images/product_img/portfolio-5.jpg" class="img-fluid" style="width:100%;height: 100%">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-sm-4 col-4 prod-imgset-contain">
+                                <div class="mt-2" style="height: 50px" onclick="changeimg(this)">
+                                    <img src="images/product_img/portfolio-6.jpg" class="img-fluid" style="width:100%;height: 100%">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                     <div class="d-flex pt-5">
                         <div class="order-btn">
                             Order item
@@ -128,6 +172,11 @@
         </div>
     </div>
 
+
+ <script type="text/javascript" src="../popper/docs/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../popper/docs/js/main.js"></script>
+    <script src="js/js-file.js"></script>
 </body>
 
 </html>
