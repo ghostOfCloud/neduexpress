@@ -36,10 +36,212 @@
 	border:1px solid blue;
 }*/
 
+
+	/*=================== CARD FLIP=======================*/
+
+.flip-card {
+	background-color: transparent;
+	width: 100%;
+	height: 280px;
+	/*border: 1px solid red;*/
+	perspective: 1000px;  /*Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+	position: relative;
+	width: black;
+	width: 100%;
+	height: 100%;
+	/*text-align: center;*/
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-cont{
+	padding-top: 15px;
+}
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+	/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+
+
+	/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+	background-color: white;
+	border: 6px double #F58634;
+	background-color: #FDC49A;
+	box-shadow: 5px 5px 5px #F58634;
+	color: #3A424F;
+	font-weight: bold;
+
+}
+
+.flip-card-inner .flip-card-front>p{
+	text-align: left;
+}
+
+.flip-card-front>p{
+	font-size: 13px;
+	margin: 5px 10px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #F58634;
+	/*text-align: left;*/
+	display: inline-flex;
+}
+
+	/* Style the back side */
+.flip-card-back {
+	/*background-color: dodgerblue;*/
+	border: 1px solid orange;
+	color: white;
+	transform: rotateY(180deg);
+}
+
+.myflip{
+	position: relative;
+}
+.myflip a{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color:#3A424FC4;
+	font-style: italic;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.myflip a:hover{
+	color: #F58634;
+}
+
+/*======== DASHBOARD OVERVIEW DESIGN*/
+
+.features-design{
+	border:1px solid #ccc;
+	box-shadow: 5px 5px 5px #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 20px;
+	height: 150px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.features-design a .fa{
+	font-size: 45px;
+	color: #F58634;
+	transition: .5s;
+}
+
+.features-design a p,
+.payment_method a{
+	color: #3A424F;
+	font-style: italic;
+}
+
+.features-design a:hover .fa,
+.features-design a:hover p{
+	color: #DD650D;
+}
+
+.features-design-cont{
+	margin-bottom: 100px;
+}
+
+.sales-cont{
+	margin-top: 50px
+}
+
+
+/*================PAYMENT METHOD*/
+.payment_method{
+	border: 1px solid #F58634;
+	box-shadow: 5px 5px 5px #ccc;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 10px 30px 10px;
+	height: 100%;
+}
+.payment_method>div{
+	text-align: left;
+	font-style: italic;
+	border-bottom: 1px solid #F58634;
+}
+.payment_method p{
+	padding-top: 10px;
+	color:#535252;
+	font-size: 30px;
+}
+
+.payment_method a{
+	color:#DD650D;
+	font-weight: bold;
+}
+
+.payment_method a:hover{
+	color: #F58634;
+}
+
+.pm-add{
+	border-bottom: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*border: 1px solid red;*/
+	height: inherit;
+}
+
+.pm-add-cont .payment_method{
+	border:1px solid #ccc;
+}
+.pm-add .fa-plus{
+	font-size: 50px;
+	width: 100%;
+	height: 100%;
+	padding: 13px 20px;
+	background-color: #ccc;
+	border:1px solid #ccc;
+	/*padding: 20px 10px 0 0;*/
+	transition: .5s;
+}
+
+.pm-add-cont .payment_method:hover .pm-add .fa-plus{
+	color: white;
+	background-color: #F58634;
+	border: 1px solid #F58634;
+	cursor: pointer;
+}
+
+
 /*=============================== NEDIA QUERIES START HERE ============================*/
 
 @media (min-width:992px){
 	.dash-header div img{
 		width:6%;
+	}
+
+	.flip-cont{
+		padding-top: 0px;
+	}
+
+	.may-like-img{
+		padding-top: 10px;
 	}
 }

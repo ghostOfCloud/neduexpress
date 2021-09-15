@@ -201,13 +201,16 @@ a[data-toggle="collapse"] {
 .product-order-body-img{
   margin-top: 25px;
 }
-
 .product-order-body-img:hover{
   box-shadow: 5px 5px 5px grey;
   transition: 0.5s all ease-in-out;
 }
+.fa-trash{
+  font-size: 18px;
+}
 
-.fa-plus{
+.fa-plus,
+.fa-trash{
   background-color: #F58634;
   border: 1px solid #F58634;
   color: white;
@@ -216,7 +219,8 @@ a[data-toggle="collapse"] {
   border-radius: 50%;
 }
 
-.fa-plus:hover{
+.fa-plus:hover,
+.fa-trash:hover{
   background-color: inherit;
   color: #F58634;
   cursor: pointer;
@@ -225,11 +229,11 @@ a[data-toggle="collapse"] {
 .upload-btn{
   background-color: #F58634;
   border:none;
-  /*width:100%;*/
   color: white;
   font-weight: bold;
   padding: 5px 20px ;
   border-radius: 5px;
+  transition: 0.4s;
 }
 
 .upload-btn:hover{
@@ -363,6 +367,7 @@ a[data-toggle="collapse"] {
   color: #F58634;
   font-size: 150px;
 }
+
 
 /*========================  ALL ORDERS DELIVERIES MADE ==============*/
 .azorders table thead{
