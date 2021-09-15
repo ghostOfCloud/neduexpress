@@ -298,7 +298,22 @@ hr{
 	transform: scale(1.25);
 }
 
+.product-order-body-img img{
+	height: 350px !important;
 
+}
+
+.product-order-det{
+		margin-top: 20px ;
+	}
+
+.product-order-body-img{
+	/*height: 100%;*/
+}
+
+.prod-imgset-row .b-active{
+	border: 3px solid #F58634;
+}
 
 /*PRODCUT PAGE DESIGN*/
 .product-header div img{
@@ -317,6 +332,7 @@ hr{
 .seller-detail-cont{
 	display: flex;
 	justify-content: space-between;
+	
 }
 
 
@@ -656,9 +672,16 @@ footer{
 		width: 10%;
 	}*/
 
+
+
 	.product-order-body {
 		margin-top: 80px;
 		padding: 0 20px;
+	}
+
+	.product-order-body-img img{
+		height: 550px !important;
+
 	}
 
 	.categories-list{
@@ -842,6 +865,11 @@ footer{
 	.product-order-body {
 		margin-top: 80px;
 		padding: 0 70px;
+	}
+
+	.product-order-body-img img{
+		height: 450px !important;
+
 	}
 
 	.order-btn,
