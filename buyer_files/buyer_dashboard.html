@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Dashboard: vendor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="../css-files/vendor_style.css">
+		<link href="../design-files/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../../bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../css-files/animate.css">
+		<link rel="stylesheet" type="text/css" href="../css-files/index.css">
+		<link rel="stylesheet" type="text/css" href="../css-files/dashboard.css">
+		<!-- <script type="text/javascript" src="../jquery_file/jquery-3.5.1.js"></script> -->
+
+
+  </head>
+  <body>
+  		<div class="dash-header mynavbar px-md-5 d-flex justify-content-between">
+			<div class="pl-3">
+				<img src="../images/logo_img.png">
+			</div>
+
+			<div class="dash-list pr-md-5">
+				<a href="#"> Help</a>
+				<a href="user-profile.html"> Profile</a>
+			</div>
+		</div>
+		
+		<div class="wrapper d-flex align-items-stretch">
+				<nav id="sidebar">
+					<div class="custom-menu">
+						<button type="button" id="sidebarCollapse" class="btn btn-primary">
+				          <i class="fa fa-bars"></i>
+				          <span class="sr-only">Toggle Menu</span>
+				        </button>
+			        </div>
+					<div class="p-4 pt-5">
+			  		<!-- <h1><a href="index.html" class="logo">Splash</a></h1> -->
+		        <ul class="list-unstyled components mb-5">
+		          <li class="active">
+		            <a href="buyer_dashboard.html">Dashboard Overview</a>
+		          </li>
+		          <li>
+		              <a href="payment_method.html">Payment method</a>
+		          </li>
+
+		          <li>
+		              <a href="#ordermenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orders</a>
+		              <ul class="collapse list-unstyled" id="ordermenu">
+		                <li>
+		                    <a href="pending_orders.html">Pending</a>
+		                </li>
+		                 <li>
+		                    <a href="finished_orders.html">Finished Order</a>
+		                </li>
+
+		                <li>
+		                    <a href="completed_orders.html">Order Dispute</a>
+		                </li>
+		               
+		              </ul>
+		          </li>
+		          
+		         
+		          <li>
+	              <a href="profile_page.html">Profile Settings</a>
+		          </li>
+		          <!-- <li>
+	              <a href="#">Contact</a>
+		          </li> -->
+		        </ul>
+
+
+		        <div class="footer" style="position:absolute;bottom:0;">
+		        	<p>
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+					</p>
+		        </div>
+
+		      </div>
+	    	</nav>
+
+	        <!-- Page Content  -->
+	      <div id="content" class="p-4 p-md-5 pt-5">
+
+	        <div class="mycontainhide" id="storeItems">
+	        	<div>
+	        		<h4 style="display: inline-flex; border-bottom: 2px solid #F58634"><em>Dashboard Overview</em></h4>
+	        	</div>
+
+	        	<div class="container recomm-img mt-5">
+
+	        		<div class=" features-design-cont">
+	        			<div class="row">
+	        				<div class="col-lg-3 col-md-3 col-sm-6 col-6 flip-cont">
+	        					<div class="features-design">
+	        						<a href="../add_tocart.html"> <span class="fa fa-shopping-cart"></span>
+	        							<p>cart</p>
+	        						</a>
+
+	        					</div>
+	        				</div>
+
+	        				<div class="col-lg-3 col-md-3 col-sm-6 col-6 flip-cont">
+	        					<div class="features-design">
+	        						<a href="../add_tocart.html"> <span class="fa fa-shopping-bag"></span>
+	        							<p>orders</p>
+	        						</a>
+
+	        					</div>
+	        					
+	        				</div>
+
+	        				<div class="col-lg-3 col-md-3 col-sm-6 col-6 flip-cont">
+	        					<div class="features-design">
+	        						<a href="../add_tocart.html"> <span class="fa fa-user-o"></span>
+	        							<p>favorite vendors</p>
+	        						</a>
+
+	        					</div>
+	        					
+	        				</div>
+
+	        				<div class="col-lg-3 col-md-3 col-sm-6 col-6 flip-cont">
+	        					<div class="features-design">
+	        						<a href="../add_tocart.html"> <span class="fa fa-money"></span>
+	        							<p>payment history</p>
+	        						</a>
+
+	        					</div>
+	        					
+	        				</div>
+	        			</div>
+	        		</div>
+
+	        		<hr>
+
+	        		<!--  -->
+	        		<!-- <div> -->
+	        			
+
+			        	<div class="container sales-cont">
+			        		<div>
+				        		<p style="display: inline-flex; border-bottom: 2px solid #F58634"><em>Slash sale</em></p>
+				        	</div>
+			        		<div class="row">
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-3.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-8.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-9.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-7.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-sm-2 may-like-img">
+									<div class="carousel-prod-list">
+										<img src="../images/product_img/portfolio-2.jpg" class="img-fluid" style="width:100%; height: 100px">
+										<div class="p-2">
+											<a href="../product-order.html" style="padding: 6px 60px 6px 0;"><i> N 5000 </i></a>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+			        	</div>
+	        		<!-- </div> -->
+
+				</div>
+	        </div>
+	      </div>
+		</div>
+
+   <script type="text/javascript" src="../../popper/docs/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../../popper/docs/js/main.js"></script>
+    <script src="../js/js-file.js"></script>
+
+    <script type="text/javascript">
+		
+		
+	</script>
+
+  </body>
+</html>
